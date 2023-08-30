@@ -1,13 +1,12 @@
 ---
 title: 308 Permanent Redirect
 created_at: 2023-08-29
-updated_at: 2023-08-29
-description: Learn what the HTTP 308 Permanent Redirect status code means, how it differs from 301 Moved Permanently, and how it relates to search engine optimization.
+updated_at: 2023-08-30
+description: Learn what the HTTP 308 Permanent Redirect status code means, how it differs from 301 Moved Permanently, and how it relates to search engine optimization (SEO).
 ---
 
-The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 308 status code means a requested resource has been moved to a different URL once and for all.
+The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 308 status code means a requested resource has been moved to a different URL once and for all, and from now on, clients should look for this resource in a new location (as indicated in the `Location` header):
 
-`308 Permanent Redirect` implies a resource has moved permanently to a different location (as indicated in the `Location` header), and from now on, clients should look for this resource in a new location:
 
      HTTP/2 308 Permanent Redirect
      Location: https://example.com/new
@@ -25,7 +24,7 @@ The difference is that with 308, clients _should_ reuse the same request method 
 
 ## Browser support
 
-`308 Permanent Redirect` was <a href="https://datatracker.ietf.org/doc/html/rfc7238" target="_blank" rel="noopener">introduced in 2014</a>, thus <a href="https://caniuse.com/mdn-http_status_308" target="_blank" rel="noopener">ancient browsers don't support it</a>. If the backward compatibility with ancient clients is a consideration, use [301](301-moved-permanently.html).
+`308 Permanent Redirect` was <a href="https://datatracker.ietf.org/doc/html/rfc7238" target="_blank" rel="noopener">introduced in 2014</a>, so <a href="https://caniuse.com/mdn-http_status_308" target="_blank" rel="noopener">ancient browsers don't support it</a>. If backward compatibility with ancient clients is a consideration, use [301](301-moved-permanently.html).
 
 ## Search engines
 

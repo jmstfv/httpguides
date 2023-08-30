@@ -1,13 +1,13 @@
 ---
 title: 500 Internal Server Error
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-08-30
 description: Learn what the HTTP 500 Internal Server Error status code means and when it is used.
 ---
 
 The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 500 status code means a server has encountered an error and is unable to fulfill the request.
 
-`5xx` errors imply that the error originates from the server, and there's nothing a client could do. It is a generic, catch-all status code that's best used when there aren't more specific codes available.
+`5xx` errors imply that the error originates from the server, and there's nothing a client can do. It is a generic, catch-all status code that's best used when there aren't more specific codes available.
 
 If you have managed applications/servers before, you probably encountered this code when botching web server config, having inadequate permission for a file, or inadvertently missing a bug in the code.
 
