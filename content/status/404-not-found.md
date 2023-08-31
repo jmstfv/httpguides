@@ -1,7 +1,7 @@
 ---
 title: 404 Not Found
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-08-31
 description: Learn what the HTTP 404 Not Found status code means and how it relates to search engine optimization (SEO).
 ---
 
@@ -15,6 +15,6 @@ Upon encountering the `404 Not Found` error, search engines eventually remove a 
 
 ## Soft 404
 
-In the <abbr title="Search Engine Optimization">SEO</abbr> world, soft 404 is a page that tells the user it doesn't exist but returns the [`2xx` status code](/#success-2xx). This often happens when the developer serves a custom error page but forgets to set the appropriate status code.
+In the <abbr title="Search Engine Optimization">SEO</abbr> world, a soft 404 is a page that tells the user it doesn't exist but returns a [`2xx` status code](/#success-2xx). This often happens when the developer serves a custom error page but forgets to set the appropriate status code.
 
-Upon encountering soft 404s, <a href="https://developers.google.com/search/docs/advanced/crawling/soft-404-errors" target="_blank" rel="noopener">search engines might remove</a> the page from their indexes.
+Upon encountering soft 404s, <a href="https://developers.google.com/search/docs/crawling-indexing/http-network-errors#soft-404-errors" target="_blank" rel="noopener">search engines might remove</a> the page from their indexes.

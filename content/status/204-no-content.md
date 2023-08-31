@@ -1,7 +1,7 @@
 ---
 title: 204 No Content
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-08-31
 description: Learn what the HTTP 204 No Content status code means, when it is used, and how it relates to CORS preflight requests.
 ---
 
@@ -15,7 +15,7 @@ This status code is useful when clients don't need or servers don't have a respo
 
 <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.5" target="_blank" rel="noopener">HTTP spec</a> states that the <q cite="https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.5">response is terminated by the first empty line after the header fields</q>. Most HTTP clients indeed ignore the response body upon encountering a `204 No Content` response. Despite that, some web servers still include it.
 
-## Preflight requests
+## CORS preflight requests
 
 `204 No Content` is commonly used as a response to <abbr title="Cross-Origin Resource Sharing">CORS</abbr> preflight requests. Clients use preflight requests to check if servers can handle actual CORS requests:
 
@@ -31,3 +31,5 @@ If the server can understand CORS and allows the client to send a DELETE request
     Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
     Access-Control-Allow-Headers: Content-Type
     Access-Control-Max-Age: 86400
+
+However, if the server isn't properly configured to process `OPTIONS` requests, it will throw a [405 Method Not Allowed](405-method-not-allowed.html) error.

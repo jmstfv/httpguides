@@ -1,7 +1,7 @@
 ---
 title: 307 Temporary Redirect
 created_at: 2023-08-29
-updated_at: 2023-08-30
+updated_at: 2023-08-31
 description: Learn what the HTTP 307 Temporary Redirect status code means, how it differs from HTTP 302 Found, and how it relates to the Strict Transport Security (HSTS).
 ---
 
@@ -28,7 +28,7 @@ Some browsers, like Mosaic, Netscape, and Internet Explorer, have been incorrect
 
 ## Strict Transport Security (HSTS)
 
-Strict-Transport-Security (HSTS) is an HTTP header that protects websites against protocol downgrade and cookie hijacking attacks.
+`Strict-Transport-Security` (HSTS) is an HTTP header that protects websites against protocol downgrade and cookie hijacking attacks.
 
 If you add the `preload` directive to your HSTS header and <a href="https://hstspreload.org" target="_blank" rel="noopener">request your domain to be preloaded</a>, your domain will eventually be added to the preload list, which is shared among major browsers.
 

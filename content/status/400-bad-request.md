@@ -1,13 +1,13 @@
 ---
 title: 400 Bad Request
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-08-31
 description: Learn what the HTTP 400 Bad Request status code means and when it happens.
 ---
 
 The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 400 status code means a server doesn't want to process a request because of a client error.
 
-It is a generic, catch-all status code that's best used when there aren't [more descriptive status codes available](index.html#client-error-4xx).
+It's a generic, catch-all status code that's best used when there aren't [more descriptive status codes available](/#client-error-4xx).
 
 Common causes of `400 Bad Request` errors:
 

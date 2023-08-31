@@ -1,7 +1,7 @@
 ---
 title: 501 Not Implemented
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-08-31
 description: Learn what the HTTP 501 Not Implemented status code means and how it differs from 405 Method Not Allowed.
 ---
 
@@ -15,4 +15,4 @@ This status code is similar to [405 Method Not Allowed](405-method-not-allowed.h
 
 Send an arbitrary request method using <a href="https://curl.se/docs/manpage.html#-X" target="_blank" rel="noopener">`-X, --request`</a> option in <a href="https://curl.se/" target="_blank" rel="noopener">curl</a>:
 
-    curl --verbose -X LOL http://example.com
+    curl -X LOL http://example.com
