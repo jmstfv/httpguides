@@ -7,7 +7,7 @@ description: Learn what the HTTP 206 Partial Content status code means and how i
 
 The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 206 is a response code servers use for successful range requests.
 
-For example, when streaming a video, you may want to receive it in chunks (why waste the bandwidth if you only need a small fraction of the file). You can request a portion of the file by including the `Range` HTTP header:
+For example, when streaming a video, you may want to receive it in chunks (to save bandwidth if you only need a small fraction of the file). You can request a portion of the file by including the `Range` HTTP header:
 
     Range: bytes=0-
 

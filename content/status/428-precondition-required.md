@@ -1,15 +1,15 @@
 ---
 title: 428 Precondition Required
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-09-01
 description: Learn what the HTTP 428 Precondition Required status code means and how it's used to minimize the risk of conflicts during unsafe methods.
 ---
 
-The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 428 status code happens when a server requires a client to use a conditional request.
+The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 428 status code occurs when a server requires a client to use a conditional request.
 
-HTTP supports conditional requests (requests that contain one or more `If-` headers), which are often used in caching. Conditional requests can also be used to verify the integrity of files via checksums.
+HTTP supports conditional requests (requests that contain one or more `If-*` headers), which are often used in caching. Conditional requests can also be used to verify the integrity of files through checksums.
 
-It can be useful when a client wants to update a resource it retrieved a while back. While the client has been making changes, the file could have been updated or deleted in the meantime (_lost update problem_ is the term-of-art). By forcing clients to use a conditional request, the server minimizes the risk of conflicts.
+It can be useful when a client wants to update a resource they retrieved a while back. While the client has been making changes, the file could have been updated or deleted in the meantime (_lost update problem_ is the term-of-art). By forcing clients to use a conditional request, the server minimizes the risk of conflicts.
 
     PUT /upload HTTP/2
 

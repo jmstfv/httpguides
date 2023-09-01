@@ -1,7 +1,7 @@
 ---
 title: 425 Too Early
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-09-01
 description: Learn what the HTTP 425 Too Early status code means, when it happens, how widely browsers support it, and how it relates to WebDAV.
 ---
 
@@ -13,8 +13,8 @@ If the server perceives the possibility of a replay attack to be significant, it
 
 ## Browser support
 
-Firefox added support for the `425 Too Early` in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1406908" target="_blank" rel="noopener">version 58</a>. As of this writing, Firefox browsers earlier than version 58 account for <a href="https://caniuse.com/mdn-http_status_425" target="_blank" rel="noopener">less than 0.5% of global usage</a>.
+Firefox added support for the `425 Too Early` status code in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1406908" target="_blank" rel="noopener">version 58</a>. As of this writing, Firefox browsers earlier than version 58 account for <a href="https://caniuse.com/mdn-http_status_425" target="_blank" rel="noopener">less than 0.1% of global usage</a>.
 
 ## WebDAV Unordered Collection
 
-In the draft version of <a href="https://datatracker.ietf.org/doc/html/draft-ietf-webdav-ordering-protocol-00#section-11.1" target="_blank" rel="noopener">RFC 3648</a>, the 425 status code was supposed to mean that the order in the <abbr title="Web Distributed Authoring and Versioning">WebDAV</abbr> collection has been violated. It's a non-standard status code that never gained wide adoption and is obsolete at this point.
+In the draft version of <a href="https://datatracker.ietf.org/doc/html/draft-ietf-webdav-ordering-protocol-00#section-11.1" target="_blank" rel="noopener">RFC 3648</a>, the 425 status code was supposed to mean that the order in the <abbr title="Web Distributed Authoring and Versioning">WebDAV</abbr> collection has been violated. It was a non-standard status code that never gained wide adoption and is now obsolete.

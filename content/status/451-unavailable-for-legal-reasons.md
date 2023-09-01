@@ -1,17 +1,17 @@
 ---
 title: 451 Unavailable For Legal Reasons
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-09-01
 description: Learn what the HTTP 451 Unavailable For Legal Reasons status code means and when it is used.
 ---
 
 The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 451 status code means a client can't access a resource due to legal reasons.
 
-Some countries routinely send takedown requests <a href="https://transparency.automattic.com/wordpress-dot-com/country-block-list/" target="_blank" rel="noopener">to major websites</a>. In such cases, `451 Unavailable For Legal Reasons` is the appropriate the status code to return.
+Some countries routinely send takedown requests <a href="https://transparency.automattic.com/wordpress-dot-com/country-block-list/" target="_blank" rel="noopener">to major websites</a>. In such cases, the appropriate status code to return is `451 Unavailable For Legal Reasons`.
 
 When the <abbr title="General Data Protection Regulation">GDPR</abbr> legislation went into effect, many news websites decided to limit access to their content to European IP addresses by returning the 451 status code.
 
-The server usually includes the `Link` HTTP header indicating who ordered the blockage of the resource:
+The server usually includes the `Link` HTTP header indicating who ordered the blocking of the resource:
 
     HTTP/2 451 Unavailable For Legal Reasons
     Link: <https://spqr.example.com/senate>; rel="blocked-by"

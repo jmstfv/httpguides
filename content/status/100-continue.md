@@ -41,4 +41,4 @@ This mechanism <a href="https://curl.se/mail/lib-2017-07/0013.html" target="_bla
 
 ## See also
 
-* [417 Expectation Failed](417-expectation-failed.html) - status code servers use when they don't support or couldn't understand the `Expect` header.
+* [417 Expectation Failed](417-expectation-failed.html) - a status code servers use when they don't support or couldn't understand the `Expect` header.

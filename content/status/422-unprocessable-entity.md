@@ -1,7 +1,7 @@
 ---
-title: HTTP 422 Unprocessable Entity
+title: 422 Unprocessable Entity
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2023-09-01
 description: Learn what the HTTP 422 Unprocessable Entity status code means, how it differs from 400 Bad Request, and how to deal with it in Ruby on Rails.
 ---
 
@@ -16,7 +16,7 @@ While the request body (payload) can be technically correct, it can fail in diff
 
 ## 422 vs 400
 
-If the client sends you a malformed or invalid JSON, you would return the [`400 Bad Request`](400-bad-request.html). If the JSON itself is valid, but some fields aren't, you should respond with `422 Unprocessable Entity`.
+If the client sends you a malformed or invalid JSON, you should return the [`400 Bad Request`](400-bad-request.html). If the JSON itself is valid, but some fields aren't, you should respond with `422 Unprocessable Entity`.
 
 Likewise, if the data client sends is valid but doesn't pass server-specific validations, you should probably respond with 422.
 
@@ -32,16 +32,16 @@ Rails responds with `422 Unprocessable Entity` when the client fails to pass a <
 
 * Send CSRF tokens on all non-GET requests
 
-Starting from version 5.2, <a href="https://github.com/rails/rails/pull/29742" target="_blank" rel="noopener">Rails automatically enables CSRF checks</a> in all views/controllers. If you're sending AJAX requests, you have to explicitly include the `X-CSRF-Token` header:
+Starting from version 5.2, <a href="https://github.com/rails/rails/pull/29742" target="_blank" rel="noopener">Rails automatically enables CSRF checks</a> in all views/controllers. If you're sending AJAX requests, you must explicitly include the `X-CSRF-Token` header:
 
     'X-CSRF-Token': document.querySelector("meta[name=csrf-token]").content
 
 * Disable CSRF checks (**not recommended**)
 
-You can disable the CSRF check for a particular (or all) controller by including the `skip_before_action` action.
+You can disable the CSRF check for a particular controller by including the `skip_before_action` action.
 
     class UsersController < ApplicationController
       skip_before_action :verify_authenticity_token
     end
 
-Note that this opens your app for a CSRF attack. You should only do this if you trust the input (for example, webhooks from a third-party API).
+Note that this opens your app to a CSRF attack. You should only do this if you trust the input (for example, webhooks from a third-party API).
