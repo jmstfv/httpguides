@@ -24,8 +24,12 @@
       <header>
         <h1><%= @item[:title] %></h1>
       </header>
-
-      <%= yield %>
+      <article>
+        <%= yield %>
+      </article>
     </main>
+    <footer>
+      <p>Written by <a href="https://twitter.com/jmstfv" target="_blank" rel="noopener">@jmstfv</a></p>
+    </footer>
   </body>
 </html>

@@ -87,3 +87,10 @@ table th {
 table td {
   padding: 1rem;
 }
+
+footer {
+  border-top: 2px solid #212426;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}

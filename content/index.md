@@ -7,9 +7,11 @@ The knowledge combined here comes from RFCs, mailing lists, bug reports, code re
 
 Guides are written from the developer/webmaster perspective.
 
+See [About page](about.html) for more information.
+
 ## Informational (1xx)
 
-These status codes indicate the request was received while processing still continues.
+These status codes indicate that the request was received while processing is still continuing.
 
 * [HTTP 100 - Continue](/status/100-continue.html)
 * [HTTP 101 - Switching Protocols](/status/101-switching-protocols.html)
