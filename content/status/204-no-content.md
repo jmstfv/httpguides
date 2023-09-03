@@ -11,7 +11,7 @@ This status code is useful when clients don't need or servers don't have a respo
 
 * deleting a record in the <abbr title="Application Programming Interface">API</abbr> (using the HTTP DELETE method)
 * saving file progress in the document editor (for example, Google Docs)
-* [CORS preflight requests](#preflight-requests)
+* [CORS preflight requests](#cors-preflight-requests)
 
 <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.5" target="_blank" rel="noopener">HTTP spec</a> states that the <q cite="https://datatracker.ietf.org/doc/html/rfc7231#section-6.3.5">response is terminated by the first empty line after the header fields</q>. Most HTTP clients indeed ignore the response body upon encountering a `204 No Content` response. Despite that, some web servers still include it.
 
