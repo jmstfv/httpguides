@@ -1,5 +1,5 @@
 ---
-title: HTTP Status Code Guides
+title: HTTP Status Codes Guides
 description: A collection of articles explaining Hypertext Transfer Protocol (HTTP) response status codes. The knowledge combined here comes from RFCs, mailing lists, bug reports, code repositories, Q&A forums, and hard-won life experiences (as opposed to copying and pasting RFCs without any value add).
 ---
 
