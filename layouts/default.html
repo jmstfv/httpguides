@@ -6,6 +6,7 @@
     <title><%= @item[:title] %> - HTTP Guides</title>
     <link rel="stylesheet" href="/stylesheet.css">
     <meta name="description" content="<%= @item[:description] %>">
+    <link rel="canonical" href="https://httpguides.com<%= create_canonical_path(@item[:filename]) %>">
 
     <script data-goatcounter="https://gc.httpguides.com/count" async src="//gc.httpguides.com/count.js"></script>
     <script type="application/ld+json">
