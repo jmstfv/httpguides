@@ -3,35 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><%= @item[:title] %> - HTTP Guides</title>
+    <title><%= @item[:title] %></title>
     <link rel="stylesheet" href="/stylesheet.css">
     <meta name="description" content="<%= @item[:description] %>">
     <link rel="canonical" href="https://httpguides.com<%= create_canonical_path(@item[:filename]) %>">
 
     <script data-goatcounter="https://gc.httpguides.com/count" async src="//gc.httpguides.com/count.js"></script>
-    <script type="application/ld+json">
-     {
-       "@context": "https://schema.org/",
-       "@type": "TechArticle",
-       "headline": "<%= @item[:title] %>",
-       "datePublished": "<%= @item[:created_at] %>",
-       "dateModified": "<%= @item[:updated_at] %>",
-       "description": "<%= @item[:description] %>",
-       "inLanguage": "en-US"
-     }
-     </script>
   </head>
-  <body>
+  <body style="max-width: 70rem">
     <main>
       <header>
         <h1><%= @item[:title] %></h1>
       </header>
-      <article>
-        <%= yield %>
-      </article>
+
+      <%= yield %>
     </main>
-    <footer>
-      <p>Written by <a href="https://twitter.com/jmstfv" target="_blank" rel="noopener">@jmstfv</a></p>
-    </footer>
   </body>
 </html>

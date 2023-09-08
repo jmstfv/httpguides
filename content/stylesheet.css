@@ -21,7 +21,6 @@ body {
   font-weight: 400;
   line-height: 1.6;
   margin: 0 auto;
-  max-width: 70rem;
   width: 95%;
   padding: 1rem;
 }
@@ -99,4 +98,44 @@ footer {
   margin-top: 2rem;
   padding: 1rem;
   text-align: center;
+}
+
+.main {
+  display: flex;
+}
+
+.main article {
+  flex-grow: 1;
+}
+
+nav {
+  flex: 0 0 33rem;
+  margin-top: 4rem;
+  position: sticky;
+  overflow: auto;
+  top: 0;
+  height: 100vh;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  padding-bottom: 0.5rem;
+}
+
+nav a {
+  color: #212426;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .main article {
+    width: 100%;
+  }
+
+  nav {
+    display: none;
+  }
 }

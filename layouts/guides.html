@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= @item[:title] %> - HTTP Guides</title>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <meta name="description" content="<%= @item[:description] %>">
+    <link rel="canonical" href="https://httpguides.com<%= create_canonical_path(@item[:filename]) %>">
+
+    <script data-goatcounter="https://gc.httpguides.com/count" async src="//gc.httpguides.com/count.js"></script>
+    <script type="application/ld+json">
+     {
+       "@context": "https://schema.org/",
+       "@type": "TechArticle",
+       "headline": "<%= @item[:title] %>",
+       "datePublished": "<%= @item[:created_at] %>",
+       "dateModified": "<%= @item[:updated_at] %>",
+       "description": "<%= @item[:description] %>",
+       "inLanguage": "en-US"
+     }
+     </script>
+  </head>
+  <body>
+    <main class="main">
+      <nav>
+        <ul>
+          <li><a href="/status/100-continue.html">100 Continue</a></li>
+          <li><a href="/status/101-switching-protocols.html">101 Switching Protocols</a></li>
+          <li><a href="/status/103-early-hints.html">103 Early Hints</a></li>
+          <li><a href="/status/200-ok.html">200 OK</a></li>
+          <li><a href="/status/201-created.html">201 Created</a></li>
+          <li><a href="/status/202-accepted.html">202 Accepted</a></li>
+          <li><a href="/status/203-non-authoritative-information.html">203 Non-Authoritative Information</a></li>
+          <li><a href="/status/204-no-content.html">204 No Content</a></li>
+          <li><a href="/status/205-reset-content.html">205 Reset Content</a></li>
+          <li><a href="/status/206-partial-content.html">206 Partial Content</a></li>
+          <li><a href="/status/300-multiple-choices.html">300 Multiple Choices</a></li>
+          <li><a href="/status/301-moved-permanently.html">301 Moved Permanently</a></li>
+          <li><a href="/status/302-found.html">302 Found</a></li>
+          <li><a href="/status/303-see-other.html">303 See Other</a></li>
+          <li><a href="/status/304-not-modified.html">304 Not Modified</a></li>
+          <li><a href="/status/307-temporary-redirect.html">307 Temporary Redirect</a></li>
+          <li><a href="/status/308-permanent-redirect.html">308 Permanent Redirect</a></li>
+          <li><a href="/status/400-bad-request.html">400 Bad Request</a></li>
+          <li><a href="/status/401-unauthorized.html">401 Unauthorized</a></li>
+          <li><a href="/status/402-payment-required.html">402 Payment Required</a></li>
+          <li><a href="/status/403-forbidden.html">403 Forbidden</a></li>
+          <li><a href="/status/404-not-found.html">404 Not Found</a></li>
+          <li><a href="/status/405-method-not-allowed.html">405 Method Not Allowed</a></li>
+          <li><a href="/status/406-not-acceptable.html">406 Not Acceptable</a></li>
+          <li><a href="/status/407-proxy-authentication-required.html">407 Proxy Authentication Required</a></li>
+          <li><a href="/status/408-request-timeout.html">408 Request Timeout</a></li>
+          <li><a href="/status/409-conflict.html">409 Conflict</a></li>
+          <li><a href="/status/410-gone.html">410 Gone</a></li>
+          <li><a href="/status/411-length-required.html">411 Length Required</a></li>
+          <li><a href="/status/412-precondition-failed.html">412 Precondition Failed</a></li>
+          <li><a href="/status/413-request-entity-too-large.html">413 Request Entity Too Large</a></li>
+          <li><a href="/status/414-request-uri-too-long.html">414 Request URI Too Long</a></li>
+          <li><a href="/status/415-unsupported-media-type.html">415 Unsupported Media Type</a></li>
+          <li><a href="/status/416-range-not-satisfiable.html">416 Range Not Satisfiable</a></li>
+          <li><a href="/status/417-expectation-failed.html">417 Expectation Failed</a></li>
+          <li><a href="/status/418-im-a-teapot.html">418 I’m a Teapot</a></li>
+          <li><a href="/status/421-misdirected-request.html">421 Misdirected Request</a></li>
+          <li><a href="/status/422-unprocessable-entity.html">422 Unprocessable Entity</a></li>
+          <li><a href="/status/425-too-early.html">425 Too Early</a></li>
+          <li><a href="/status/426-upgrade-required.html">426 Upgrade Required</a></li>
+          <li><a href="/status/428-precondition-required.html">428 Precondition Required</a></li>
+          <li><a href="/status/429-too-many-requests.html">429 Too Many Requests</a></li>
+          <li><a href="/status/431-request-header-fields-too-large.html">431 Request Header Fields Too Large</a></li>
+          <li><a href="/status/451-unavailable-for-legal-reasons.html">451 Unavailable For Legal Reasons</a></li>
+          <li><a href="/status/500-internal-server-error.html">500 Internal Server Error</a></li>
+          <li><a href="/status/501-not-implemented.html">501 Not Implemented</a></li>
+          <li><a href="/status/502-bad-gateway.html">502 Bad Gateway</a></li>
+          <li><a href="/status/503-service-unavailable.html">503 Service Unavailable</a></li>
+          <li><a href="/status/504-gateway-timeout.html">504 Gateway Timeout</a></li>
+          <li><a href="/status/505-http-version-not-supported.html">505 HTTP Version Not Supported</a></li>
+        </ul>
+      </nav>
+      <article>
+        <header>
+          <h1><%= @item[:title] %></h1>
+        </header>
+        <%= yield %>
+      </article>
+    </main>
+    <footer>
+      <p>Written by <a href="/about.html">@jmstfv</a></p>
+    </footer>
+  </body>
+</html>
