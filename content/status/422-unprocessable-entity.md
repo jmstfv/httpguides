@@ -1,7 +1,7 @@
 ---
 title: 422 Unprocessable Entity
 created_at: 2023-08-29
-updated_at: 2023-09-01
+updated_at: 2023-09-22
 description: Learn what the HTTP 422 Unprocessable Entity status code means, how it differs from 400 Bad Request, and how to deal with it in Ruby on Rails.
 ---
 
@@ -20,7 +20,7 @@ If the client sends you a malformed or invalid JSON, you should return the [`400
 
 Likewise, if the data client sends is valid but doesn't pass server-specific validations, you should probably respond with 422.
 
-For example, if you're building <a href="https://shopify.dev/concepts/about-apis/response-codes" target="_blank" rel="noopener">an API for an e-commerce platform</a>, 422 would be appropriate when the client:
+For example, if you're building <a href="https://shopify.dev/docs/api/usage/response-codes" target="_blank" rel="noopener">an API for an e-commerce platform</a>, 422 would be appropriate when the client:
 
 * creates a product without a name
 * incorrectly formats the data

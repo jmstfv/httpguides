@@ -40,4 +40,4 @@ Starting from <a href="https://github.com/nodejs/node/pull/24811" target="_blank
 
     node --max-http-header-size=16384 index.js
 
-The default was reduced from about 80 kilobytes to 8 kilobytes (8192 bytes) to prevent <a href="https://nodejs.org/en/blog/vulnerability/november-2018-security-releases/#denial-of-service-with-large-http-headers-cve-2018-12121" target="_blank" rel="noopener">a denial of service attack</a> with large HTTP headers (CVE-2018-12121).
+The default was reduced from about 80 kilobytes to 8 kilobytes (8192 bytes) to prevent <a href="https://nodejs.org/en/blog/vulnerability/november-2018-security-releases#denial-of-service-with-large-http-headers-cve-2018-12121" target="_blank" rel="noopener">a denial of service attack</a> with large HTTP headers (CVE-2018-12121).
