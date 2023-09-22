@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
 
+compile '/sitemap.erb' do
+  filter :erb
+  write '/sitemap.xml'
+end
+
 compile '/status/*.md' do
   filter :kramdown
   layout '/guides.*'

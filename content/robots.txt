@@ -4,3 +4,4 @@
 
 User-agent: *
 Disallow:
+Sitemap: https://httpguides.com/sitemap.xml
