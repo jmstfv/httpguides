@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><%= @item[:title] %></title>
     <link rel="stylesheet" href="/stylesheet.css">
+    <style>
+      body {
+        max-width: 70rem;
+      }
+    </style>
     <meta name="description" content="<%= @item[:description] %>">
     <link rel="canonical" href="https://httpguides.com<%= create_canonical_path(@item[:filename]) %>">
-
     <script data-goatcounter="https://gc.httpguides.com/count" async src="//gc.httpguides.com/count.js"></script>
   </head>
-  <body style="max-width: 70rem">
+  <body>
     <main>
       <header>
         <h1><%= @item[:title] %></h1>
