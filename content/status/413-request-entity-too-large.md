@@ -1,7 +1,7 @@
 ---
 title: 413 Request Entity Too Large
 created_at: 2023-08-29
-updated_at: 2023-09-01
+updated_at: 2024-05-03
 description: Learn what the HTTP 413 Request Entity Too Large status code means, when it happens, and how to work around it in Apache and Nginx.
 ---
 
@@ -15,7 +15,9 @@ You can impose a limit on the request body size by setting the <a href="https://
 
     LimitRequestBody 1024000
 
-It is worth mentioning that the limit is typically imposed by PHP. To increase the file upload and POST request size to 10 megabytes, for example, set the `upload_max_filesize` and `post_max_size` configs in the `php.ini` file.
+Keep in mind that this directive must be defined before loading virtual hosts, which means it should be placed **at the top of your config file**.
+
+Worth mentioning that the limit is typically imposed by PHP. To increase the file upload and POST request size to 10 megabytes, for example, set the `upload_max_filesize` and `post_max_size` configs in the `php.ini` file.
 
     upload_max_filesize = 10M
     post_max_size = 10M

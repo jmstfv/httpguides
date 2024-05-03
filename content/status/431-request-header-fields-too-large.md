@@ -2,7 +2,7 @@
 title: 431 Request Header Fields Too Large
 created_at: 2023-08-29
 updated_at: 2024-05-03
-description: Learn what the HTTP 431 Request Headers Fields Too Large status code means, when this error happens, and how to work around it in Nginx and Node.js.
+description: Learn what the HTTP 431 Request Headers Fields Too Large status code means, when this error happens, and how to work around it in Nginx, Node.js, and Apache.
 ---
 
 The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 431 status code indicates that a server refuses to process a request because HTTP headers are too large.
@@ -43,3 +43,13 @@ Starting from <a href="https://github.com/nodejs/node/pull/24811" target="_blank
 Alternatively, you could pass the <a href="https://nodejs.org/api/http.html#http_http_maxheadersize" target="_blank" rel="noopener">`maxHeaderSize`</a> option for servers and client requests.
 
 The default was reduced from about 80 kilobytes to <a href="https://github.com/nodejs/node/commit/186035243fad247e3955fa0c202987cae99e82db" target="_blank" rel="noopener">8 kilobytes</a> to prevent <a href="https://nodejs.org/en/blog/vulnerability/november-2018-security-releases#denial-of-service-with-large-http-headers-cve-2018-12121" target="_blank" rel="noopener">a denial of service attack</a> with large HTTP headers (<a href="https://nvd.nist.gov/vuln/detail/CVE-2018-12121" target="_blank" rel="noopener">CVE-2018-12121</a>). However, since this change in configuration, which was immutable at the time, <a href="https://github.com/nodejs/node/issues/24692" target="_blank" rel="noopener">broke many applications</a>, the default was increased to <a href="https://github.com/nodejs/node/commit/bd9f4d295495b11d2e460b320681e18a11524bb8" target="_blank" rel="noopener">16 kilobytes</a> in later versions.
+
+## Apache
+
+Apache limits the length of HTTP headers to 8,190 bytes (8 kilobytes). You can change this default by specifying the <a href="https://httpd.apache.org/docs/current/mod/core.html#limitrequestfieldsize" target="_blank" rel="noopener">`LimitRequestFieldSize` directive</a>:
+
+    LimitRequestFieldSize 16382
+
+If that doesn't resolve the 431 errors, consider modifying the <a href="https://httpd.apache.org/docs/current/mod/core.html#limitrequestline" target="_blank" rel="noopener">`LimitRequestLine` directive</a> as well; this governs the maximum size of the HTTP request line.
+
+Keep in mind that these directives must be defined before loading virtual hosts, which means they should be placed **at the top of your config file**.
