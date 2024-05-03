@@ -1,7 +1,7 @@
 ---
 title: 409 Conflict
 created_at: 2023-08-29
-updated_at: 2023-09-01
+updated_at: 2024-05-03
 description: Learn what the HTTP 409 Conflict status code means, how it differs from 412 Precondition Failed and 422 Unprocessable Entity, and when it happens.
 ---
 
@@ -19,7 +19,7 @@ Both of these status codes are valid if you want to verify the integrity of the 
 
 Consider a typical example where a user wants to create an account. If you want to create a user with an existing email address or tie it to a delinquent account, the server can respond with a `409 Conflict` status code. Likewise, if you want to prevent account deletions that have active users tied to it, 409 is a way to go. If a `User` model doesn't contain the `username` field, but you still include it in the request body, then a [`422 Unprocessable Entity`](422-unprocessable-entity.html) would be more appropriate.
 
-`409 Conflict` is also used when a current request might interfere with one of the previous requests. For example, to ensure that unsafe requests are idempotent, <a href="https://stripe.com/docs/api/idempotent_requests" target="_blank" rel="noopener">Stripe returns 409</a> on requests that contain the same idempotency key as one of the previous requests.
+`409 Conflict` is also used when a current request might interfere with one of the previous requests. For example, to ensure that unsafe requests are idempotent, <a href="https://docs.stripe.com/api/idempotent_requests" target="_blank" rel="noopener">Stripe returns 409</a> on requests that contain the same idempotency key as one of the previous requests.
 
 Rule of thumb:
 
