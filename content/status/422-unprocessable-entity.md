@@ -1,7 +1,7 @@
 ---
 title: 422 Unprocessable Entity
 created_at: 2023-08-29
-updated_at: 2023-09-22
+updated_at: 2024-05-03
 description: Learn what the HTTP 422 Unprocessable Entity status code means, how it differs from 400 Bad Request, and how to deal with it in Ruby on Rails.
 ---
 
@@ -26,7 +26,7 @@ For example, if you're building <a href="https://shopify.dev/docs/api/usage/resp
 * incorrectly formats the data
 * checks out products that are out-of-stock
 
-## Rails
+## Ruby on Rails
 
 Rails responds with `422 Unprocessable Entity` when the client fails to pass a <abbr title="Cross-site Request Forgery">CSRF</abbr> check. There are two ways around this problem:
 
