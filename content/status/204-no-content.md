@@ -9,7 +9,7 @@ The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 204 status code means 
 
 This status code is useful when clients don't need or servers don't have a response body. Some real-life examples:
 
-* deleting a record in the <abbr title="Application Programming Interface">API</abbr> (using the HTTP DELETE method)
+* deleting a record via the <abbr title="Application Programming Interface">API</abbr> (using the HTTP DELETE method)
 * saving file progress in the document editor (for example, Google Docs)
 * [CORS preflight requests](#cors-preflight-requests)
 
