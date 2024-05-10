@@ -1,7 +1,7 @@
 ---
 title: 414 Request-URI Too Long
 created_at: 2023-08-29
-updated_at: 2023-09-01
+updated_at: 2023-05-10
 description: Learn what the HTTP 414 Request-URI Too Long status code means, why this error happens, and how to work around it in Apache and Nginx.
 ---
 
@@ -19,9 +19,11 @@ Overwhelmingly, this happens when someone _misuses_ GET requests to send form da
 
 ## Apache
 
-You can increase the maximum allowed URI length in Apache by changing the <a href="https://httpd.apache.org/docs/current/mod/core.html#limitrequestline" target="_blank" rel="noopener">`LimitRequestLine`</a> directive in your `/etc/apache2/apache2.conf` file. By default, Apache accepts URIs up to 8190 bytes.
+You can increase the maximum allowed URI length in Apache by tweaking the <a href="https://httpd.apache.org/docs/current/mod/core.html#limitrequestline" target="_blank" rel="noopener">`LimitRequestLine`</a> directive. By default, Apache accepts URIs up to 8190 bytes.
 
     LimitRequestLine 128000
+
+Keep in mind that this directive must be defined before loading virtual hosts, which means it should be placed **at the top of your config file**.
 
 ## Nginx
 

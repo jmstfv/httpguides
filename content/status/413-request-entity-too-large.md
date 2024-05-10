@@ -1,7 +1,7 @@
 ---
 title: 413 Request Entity Too Large
 created_at: 2023-08-29
-updated_at: 2024-05-05
+updated_at: 2024-05-10
 description: Learn what the HTTP 413 Request Entity Too Large status code means, when it happens, and how to work around it in Apache and Nginx.
 ---
 
@@ -11,7 +11,7 @@ The server may choose to close the connection to prevent the client from complet
 
 ## Apache
 
-You can impose a limit on the request body size by setting the <a href="https://httpd.apache.org/docs/current/mod/core.html#limitrequestbody" target="_blank" rel="noopener">`LimitRequestBody` config</a> in Apache. The default is set to 1GB. In earlier versions of Apache (2.4.53 and earlier), the default was `0`, meaning there were no restrictions on the request body size.
+You can impose a limit on the request body size by setting the <a href="https://httpd.apache.org/docs/current/mod/core.html#limitrequestbody" target="_blank" rel="noopener">`LimitRequestBody`</a> directive in Apache. The default is set to 1GB (1073741824 bytes). In earlier versions of Apache (2.4.53 and earlier), the default was `0`, meaning there were no restrictions on the request body size.
 
     LimitRequestBody 1024000
 
