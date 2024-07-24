@@ -1,7 +1,7 @@
 ---
 title: 414 Request-URI Too Long
 created_at: 2023-08-29
-updated_at: 2023-05-10
+updated_at: 2023-07-24
 description: Learn what the HTTP 414 Request-URI Too Long status code means, why this error happens, and how to work around it in Apache and Nginx.
 ---
 
@@ -17,14 +17,6 @@ While <a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.12" tar
 
 Overwhelmingly, this happens when someone _misuses_ GET requests to send form data encoded in a large query string. In such instances, it's better to stick to POST requests unless you have _a very good reason_ not to. Most web servers do allow you to increase the default limit if you want to accommodate such use cases.
 
-## Apache
-
-You can increase the maximum allowed URI length in Apache by tweaking the <a href="https://httpd.apache.org/docs/current/mod/core.html#limitrequestline" target="_blank" rel="noopener">`LimitRequestLine`</a> directive. By default, Apache accepts URIs up to 8190 bytes.
-
-    LimitRequestLine 128000
-
-Keep in mind that this directive must be defined before loading virtual hosts, which means it should be placed **at the top of your config file**.
-
 ## Nginx
 
 If your nginx error logs contain the message `client sent too long URI while reading client request line`, it means the request URI has exceeded the allowed limit.
@@ -35,6 +27,18 @@ In nginx, the maximum allowed URI length is defined by the <a href="https://ngin
 
 If you still get 414 responses from Nginx, keep increasing the buffer size (the second part, `16K` in the above example). Don't forget to reload/restart your server each time you change a config.
 
+## Apache
+
+You can increase the maximum allowed URI length in Apache by tweaking the <a href="https://httpd.apache.org/docs/current/mod/core.html#limitrequestline" target="_blank" rel="noopener">`LimitRequestLine`</a> directive. By default, Apache accepts URIs up to 8190 bytes.
+
+    LimitRequestLine 128000
+
+Keep in mind that this directive must be defined before loading virtual hosts, which means it should be placed **at the top of your config file**.
+
 ## Trivia
 
 Due to backward compatibility requirements, Apple platforms (macOS and iOS) can accept URIs <a href="https://github.com/apple/swift-corelibs-foundation/blob/af3bfa27cccc5b20420ef9dc4ea15341e83611b5/CoreFoundation/URL.subproj/CFURLComponents_URIParser.c#L715" target="_blank" rel="noopener">up to 2 gigabytes in size</a>.
+
+## See also
+
+* [431 Request Header Fields Too Large](431-request-header-fields-too-large.html) - when HTTP headers are too large for the server to accept.
