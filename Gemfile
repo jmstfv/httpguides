@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.1.4'
+ruby '3.2.3'
 
 gem 'builder', '~> 3.2', '>= 3.2.4'
 gem 'nanoc', '~> 4.12', '>= 4.12.16'
