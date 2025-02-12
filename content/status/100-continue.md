@@ -1,13 +1,15 @@
 ---
 title: 100 Continue
 created_at: 2023-08-29
-updated_at: 2023-09-04
+updated_at: 2025-02-12
 description: Learn what the HTTP 100 Continue status code means, how servers can use it to save bandwidth, and how curl handles the Expect header.
 ---
 
 The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 100 status code means a request looks good so far and that the client should continue with the request.
 
 Imagine a case where you want to upload a large file to the server. Most web servers have limits on acceptable sizes of incoming messages to prevent <abbr title="Denial of Service">DoS</abbr> attacks (there can be other restrictions, such as authentication, authorization, or lack of support for particular HTTP methods). To avoid wasting bandwidth by sending a file only for the request to fail somewhere along the way, you can ask the server for an approval first, allowing it to flag any issues before the client sends the request body.
+
+In practice, however, there are many broken servers, which don't handle this status code properly, so more often that not, you're better off not using it.
 
 `100 Continue` is an informational status code, and in most cases, you won't have to deal with it directly. [Informational status codes (`1xx`)](/#informational-1xx) are temporary and should not be treated as final responses.
 

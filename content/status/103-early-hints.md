@@ -1,13 +1,13 @@
 ---
 title: 103 Early Hints
 created_at: 2023-08-29
-updated_at: 2023-08-29
+updated_at: 2025-02-12
 description: Learn what the HTTP 103 Early Hints status code means, how servers can use it to speed up web browsing, and where the Link header fits into the picture.
 ---
 
 The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> 103 status code means a server is sending HTTP headers that are likely to be included in the final response.
 
-The most practical example of this is the server sending `Link` HTTP headers. Servers can inform clients beforehand that they will likely need the following resources, so clients can start downloading them right away.
+The most practical example of this is the server sending `Link` HTTP headers. Servers can inform clients in advance that they will likely need certain resources, allowing clients to start downloading them immediately and thus improving page load times.
 
      HTTP/2 103 Early Hints
      Link: </tailbreeze.css>; rel=preload; as=style
