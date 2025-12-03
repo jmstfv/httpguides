@@ -76,6 +76,11 @@
         text-align: center;
       }
 
+      header p {
+        border-bottom: 1px dashed #212426;
+        padding-bottom: 20px;
+      }
+
       @media (max-width: 768px) {
         main article {
           width: 100%;
@@ -160,6 +165,7 @@
       <article>
         <header>
           <h1><%= @item[:title] %></h1>
+          <p><em>Last updated</em>: <time datetime="<%= @item[:updated_at] %>"><%= @item[:updated_at].strftime("%-d %b %Y") %></time></p>
         </header>
         <%= yield %>
       </article>
