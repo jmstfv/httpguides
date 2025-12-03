@@ -1,11 +1,11 @@
 ---
 title: HTTP Status Codes Guides
-description: A collection of articles explaining Hypertext Transfer Protocol (HTTP) response status codes. The knowledge combined here comes from RFCs, mailing lists, bug reports, code repositories, Q&A forums, and hard-won life experiences (as opposed to copying and pasting RFCs without any value add).
+description: A collection of articles explaining Hypertext Transfer Protocol (HTTP) response status codes. The knowledge combined here comes from RFCs, mailing lists, bug reports, code repositories, Q&A forums, and life experiences.
 ---
 
-The knowledge combined here comes from RFCs, mailing lists, bug reports, code repositories, Q&A forums, and hard-won life experiences (as opposed to copying and pasting RFCs without any value add).
+The knowledge combined here comes from RFCs, mailing lists, bug reports, code repositories, Q&A forums, and life experiences.
 
-Guides are written from the developer/webmaster perspective.
+Guides are written from the developer/webmaster perspective. Most of them were written in late 2020, early 2021, so they could be somewhat outdated.
 
 See [About page](about.html) for more information.
 
